@@ -10,7 +10,7 @@ Assembly (NASM).
 None, really. Reawakening the basic knowledge of assembly laying dormant somewhere in my brain for eons.
 
 ### How do I use this?
-1. Replace `qr_string db` with your own QR code (use the [ASCII QR Code Converter](https://github.com/rowrawer/qr-ascii) (optional),
+1. Replace `qr_string db` with your own QR code using ascii.py (optional),
 2. Compile using NASM (or whatever works, I suppose),
 3. Use it as the boot sector on a CD, USB drive, SD card, floppy disk, etc.
 4. Boot from said media,
