@@ -1,7 +1,7 @@
 
 ## The QR Code Bootloader
 ### What is this?
-This is a bootloader whose sole function is to display a fully functioning ASCII QR code on a white background.
+This is a bootloader whose sole function is to display a fully functioning ASCII QR code on a white background. Includes a short Python script whichuses [asciiqr.com](http://asciiqr.com/) to convert text strings or existing QR codes into code page 437 (or UTF-8) strings or hex values.
 
 ### What is this written in?
 Assembly (NASM).
@@ -15,6 +15,28 @@ None, really. Reawakening the basic knowledge of assembly laying dormant somewhe
 3. Use it as the boot sector on a CD, USB drive, SD card, floppy disk, etc.
 4. Boot from said media,
 5. Scan QR code (optional).
+
+---
+
+### Full output of python ascii.py -h:
+```
+usage: ascii.py [-h] [--hex] [-n] [-o FILE] [-s] [--skip-cr] [-u] [--utf8] input
+
+convert qr codes into codepage 437 ascii - uses asciiqr.com
+
+positional arguments:
+  input                string to be converted into an ascii qr code
+
+optional arguments:
+  -h, --help           show this help message and exit
+  --hex                print output as hex values
+  -n, --nasm           print output as a nasm-ready string of hex values
+  -o FILE, --out FILE  print output to specified file
+  -s, --strip          remove newlines
+  --skip-cr            do not add carriage return (when -s is not used)
+  -u, --url            treat input as a url to an existing qr code
+  --utf8               convert to utf-8 instead of codepage 437
+```
 
 ---
 
