@@ -35,7 +35,7 @@ else:
     CR = b"\x0d\x0a"
 
 try:
-    RESPONSE = requests.get(f"http://asciiqr.com/index.php?{MODE}={ARGS.input}")
+    RESPONSE = requests.get(f"http://asciiqr.com/index.php?{MODE}=&t={ARGS.input}")
 
     RESPONSE.raise_for_status()
 except HTTPError as http_err:
